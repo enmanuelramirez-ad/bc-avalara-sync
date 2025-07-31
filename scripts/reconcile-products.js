@@ -143,7 +143,7 @@ Results:
 - Total products to update: ${productsToUpdate.length}
 
 Missing Data Breakdown:
-${productsToUpdate
+${Object.entries(productsToUpdate
   .filter(p => p.is_missing_data === 'yes')
   .reduce((acc, p) => {
     const fields = p.missing_fields.split(', ');
@@ -151,7 +151,7 @@ ${productsToUpdate
       acc[field] = (acc[field] || 0) + 1;
     });
     return acc;
-  }, {})
+  }, {}))
   .map(([field, count]) => `  - ${field}: ${count} products`)
   .join('\n')}
 
