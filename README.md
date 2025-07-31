@@ -168,6 +168,8 @@ The solution uses BigCommerce custom fields to trigger the `store/product/update
 |----------|-------------|----------|
 | `BC_STORE_HASH` | BigCommerce store hash | Yes |
 | `BC_ACCESS_TOKEN` | BigCommerce API access token | Yes |
+| `BC_CLIENT_ID` | BigCommerce client ID | Yes |
+| `BC_CLIENT_SECRET` | BigCommerce client secret | Yes |
 | `AVALARA_TOKEN` | Base64 encoded accountId:licenseKey | Yes |
 | `AVALARA_COMPANY_ID` | Avalara company ID | Yes |
 | `AVALARA_SYNC_FIELD_NAME` | Custom field name for sync trigger | No (default: `avalara_sync`) |
