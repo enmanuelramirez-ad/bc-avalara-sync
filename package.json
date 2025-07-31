@@ -1,0 +1,22 @@
+{
+  "name": "bc-avalara-sync",
+  "version": "1.0.0",
+  "description": "Full reconciliation and sync of BigCommerce products to Avalara",
+  "main": "index.js",
+  "scripts": {
+    "fetch-avalara": "node scripts/fetch-avalara-items.js",
+    "fetch-bc": "node scripts/fetch-bc-products.js",
+    "reconcile": "node scripts/reconcile-products.js",
+    "update": "node scripts/update-products.js",
+    "sync-all": "npm run fetch-avalara && npm run fetch-bc && npm run reconcile && npm run update"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["bigcommerce", "avalara", "sync", "reconciliation"],
+  "author": "",
+  "license": "MIT"
+} 
